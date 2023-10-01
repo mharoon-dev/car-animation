@@ -14,16 +14,17 @@ body {
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     position: absolute;
+    
 }
 
 .trees {
     height: 100vh;
     width:100%;
     background-image: url(./images/trees.png);
-    background-repeat: repeat-x;
-    background-size: cover;
+    background-repeat: repeat;
+    bottom:3vh ;
+    animation: trees 5s linear infinite;
     position: absolute;
-    top: -144px;
 }
 
 .track {
@@ -36,6 +37,10 @@ body {
     top: 80vh;
     animation: track 10s linear infinite;
 }
+
+
+
+
 
 .car1 {
     height: 100px;
@@ -53,9 +58,8 @@ body {
     width: 5rem;
     position: absolute;
     bottom: 19vh;
-    top:58vh;
-    left: 71%;
-    animation: flag 5s ease-out 1;
+    top:-9vh;
+    left: -11%;
 }
 
 .wheel1 img {
@@ -72,6 +76,12 @@ body {
     left: 223px;
     animation: wheel 1s linear  infinite;
 }
+
+
+
+
+
+
 
 .bike1{
     height: 150px;
@@ -89,21 +99,24 @@ body {
     width: 5rem;
     position: absolute;
     bottom: 19vh;
-    top:56vh;
-    left: 52%;
-    animation: flag 5s ease-out 1;
+    top:-4vh;
+    left: -30%;
 }
+
+
+
+
 
 
 .car2 {
     height: 100px;
     width: 330px;
-    background-image: url(./images/car_body.png);
+    background-image: url(./images/vigo.png);
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     left: 20%;
-    bottom: 19vh;
+    bottom: 23vh;
     animation: carshake 5s linear infinite;
     animation: car 5s ease-out 1;
 }
@@ -111,25 +124,31 @@ body {
     width: 5rem;
     position: absolute;
     bottom: 19vh;
-    top:58vh;
-    left: 22%;
+    top:-9vh;
+    left:-18%;
     animation: flag 5s ease-out 1;
 }
 
-.wheel1 img {
-    width: 65px;
+.vigowheel1 img {
+    width: 58px;
     position: relative;
-    top: 38px;
-    left: 43px;
+    top: 71px;
+    left: 45px;
     animation: wheel 1s linear  infinite;
 }
-.wheel2 img {
-    width: 60px;
+.vigowheel2 img {
+    width: 57px;
     position: relative;
-    top: -26px;
-    left: 223px;
+    top: 10px;
+    left: 245px;
     animation: wheel 1s linear  infinite;
 }
+
+
+
+
+
+
 .bike2{
     height: 150px;
     width: 155px;
@@ -146,8 +165,8 @@ body {
     width: 5rem;
     position: absolute;
     bottom: 19vh;
-    top:56vh;
-    left:15%;
+    top:-3vh;
+    left:-30%;
     animation: flag 5s ease-out 1;
 }
 
@@ -171,11 +190,14 @@ body {
 
 
 
-@keyframes wheel {
-    100% {
-        transform: rotate(360deg);
+@keyframes trees {
+    from {
+        background: url('./images/trees.png') left ;
     }
-    
+
+    to {
+        background: url('./images/trees.png') right ;
+    }
 }
 
 @keyframes track {
@@ -195,14 +217,9 @@ body {
     }
     
 }
-
-@keyframes flag {
-    0% {
-        transform: translate(-2000%);
-    }
-
+@keyframes wheel {
     100% {
-        transform: translate(0%);
+        transform: rotate(360deg);
     }
     
 }
@@ -217,10 +234,4 @@ body {
     
 }
 
-@keyframes trees {
-    100% {
-        transform: translate(-500vw);
-    }
 
-    
-}
